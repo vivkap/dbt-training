@@ -5,4 +5,4 @@
 }}
 
 
-select * from raw.globalmart.customers
+select * from {{ source('globalmart', 'customers') }}
