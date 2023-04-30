@@ -1,4 +1,4 @@
-{%- set tabletype = "orderstable" -%}
+{% set tabletype = "orderstable" %}
 
 select
 orderid,

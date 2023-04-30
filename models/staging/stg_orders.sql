@@ -16,7 +16,8 @@ ORDERID ,
     p.CATEGORY ,
 	p.PRODUCTID ,
 	p.PRODUCTNAME ,
-	p.SUBCATEGORY    
+	p.SUBCATEGORY ,
+    {{ markup('ORDERSELLINGPRICE','ORDERCOSTPRICE') }}   as markup
           from {{ ref('raw_orders') }} o
           left join {{ ref('raw_customer') }} c
           on c.CUSTOMERID = o.CUSTOMERID
